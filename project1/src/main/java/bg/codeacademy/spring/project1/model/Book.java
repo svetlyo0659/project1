@@ -1,5 +1,7 @@
 package bg.codeacademy.spring.project1.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,22 +13,21 @@ public class Book
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private String isbnCode;
-  private String  author;
-  private String  title;
-  private int     yearOfIssue;
-  private double  price;
-  private int     quantity;
+  private int    id;
+  private String author;
+  private String title;
+  private int    yearOfIssue;
+  private int    rating;
 
 
-  public String getIsbnCode()
+  public int getId()
   {
-    return isbnCode;
+    return id;
   }
 
-  public void setIsbnCode(String isbnCode)
+  public void setId(int id)
   {
-    this.isbnCode = isbnCode;
+    this.id = id;
   }
 
   public String getAuthor()
@@ -59,25 +60,14 @@ public class Book
     this.yearOfIssue = yearOfIssue;
   }
 
-  public double getPrice()
+  public int getRating()
   {
-    return price;
+    return rating;
   }
 
-  public void setPrice(double price)
+  public void setRating(int rating)
   {
-    this.price = price;
+    this.rating = rating;
   }
-
-  public int getQuantity()
-  {
-    return quantity;
-  }
-
-  public void setQuantity(int quantity)
-  {
-    this.quantity = quantity;
-  }
-
 
 }

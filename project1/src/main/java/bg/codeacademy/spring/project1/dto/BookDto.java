@@ -9,21 +9,20 @@ package bg.codeacademy.spring.project1.dto;
 public class BookDto
 {
 
-  private String isbnCode;
+  private int    id;
   private String author;
   private String title;
   private int    yearOfIssue;
   private double price;
-  private int    quantity;
 
-  public String getIsbnCode()
+  public int getId()
   {
-    return isbnCode;
+    return id;
   }
 
-  public void setIsbnCode(String isbnCode)
+  public void setId(int id)
   {
-    this.isbnCode = isbnCode;
+    this.id = id;
   }
 
   public String getAuthor()
@@ -64,16 +63,6 @@ public class BookDto
   public void setPrice(double price)
   {
     this.price = price;
-  }
-
-  public int getQuantity()
-  {
-    return quantity;
-  }
-
-  public void setQuantity(int quantity)
-  {
-    this.quantity = quantity;
   }
 
 

@@ -3,11 +3,11 @@ package bg.codeacademy.spring.project1.service;
 import bg.codeacademy.spring.project1.model.Book;
 import bg.codeacademy.spring.project1.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+@Service
 public class BookServiceImpl implements BookService
 {
   @Autowired
@@ -21,30 +21,35 @@ public class BookServiceImpl implements BookService
   }
 
   @Override
-
-  public Book getBook(String isbnCode) //getting a book by its isbn.
+  public Book getBook(Integer id)
   {
-    return bookRepository.findByIsbn(isbnCode);
+    return null;
   }
 
   @Override
-  public void deleteBook(String isbnCode) //getting a book by its isbn.
+  public void deleteBook(Integer id)
   {
-    bookRepository.deleteByIsbn(isbnCode);
+    bookRepository.deleteById(id);
   }
 
   @Override
-  public Book updateBook(String isbnCode, Book book) //updating a isbn with a new book;
+  public Book updateBook(Integer isbnCode, Book book)
   {
-    return bookRepository.save(book);
+    return null;
   }
 
   @Override
-  public List<Book> getAllBooks()  /// returns a new list with all the books
+  public List<Book> getBookByAuthor(String author)
   {
-    List<Book> allBooks = new ArrayList<>();
-    bookRepository.findAll().forEach(allBooks::add); // lambda/arrow function
-    return allBooks;
+    return bookRepository.findByAuthorContaining(author);
+  }
+
+  @Override
+  public List<Book> getAllBooks()
+  {
+    List<Book> books=new ArrayList<>();
+    bookRepository.findAll().forEach(books::add);
+    return books;
   }
 
 

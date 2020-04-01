@@ -12,11 +12,13 @@ public interface BookService
 
   void addBook(Book book);
 
-  Book getBook(String isbnCode);
+  Book getBook(Integer id);
 
-  void deleteBook(String isbnCode);
+  void deleteBook(Integer id);
 
-  Book updateBook(String isbnCode, Book book);
+  Book updateBook(Integer id, Book book);
+
+  List<Book> getBookByAuthor(String author);
 
   List<Book> getAllBooks();
 
