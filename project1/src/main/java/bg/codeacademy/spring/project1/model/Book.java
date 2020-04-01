@@ -3,12 +3,13 @@ package bg.codeacademy.spring.project1.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Book
 {
 
-  @javax.persistence.Id
+  @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private String isbnCode;
   private String  author;

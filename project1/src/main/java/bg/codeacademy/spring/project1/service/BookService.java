@@ -2,9 +2,11 @@ package bg.codeacademy.spring.project1.service;
 
 import bg.codeacademy.spring.project1.model.Book;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Component
+
+@Service
 public interface BookService
 {
 

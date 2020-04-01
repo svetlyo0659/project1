@@ -9,6 +9,7 @@ package bg.codeacademy.spring.project1.dto;
 public class BookDto
 {
 
+  private String isbnCode;
   private String author;
   private String title;
   private int    yearOfIssue;
@@ -19,9 +20,6 @@ public class BookDto
   {
     return isbnCode;
   }
-
-  private String isbnCode;
-
 
   public void setIsbnCode(String isbnCode)
   {
